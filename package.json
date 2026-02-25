@@ -1,0 +1,37 @@
+{
+  "name": "release-note-cli",
+  "version": "0.1.0",
+  "description": "Generate release notes from git commit logs",
+  "type": "module",
+  "bin": {
+    "notes": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "release-notes",
+    "changelog",
+    "git",
+    "conventional-commits",
+    "cli"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
